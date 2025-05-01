@@ -1,0 +1,7 @@
+selenium~=4.24.0
+numpy~=2.1.3
+pandas~=2.2.3
+keras~=3.9.2
+keras-nightly~=3.10.0.dev2025050103
+scikit-learn~=1.6.1
+tensorflow~=2.19.0
