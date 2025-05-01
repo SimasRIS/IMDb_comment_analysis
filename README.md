@@ -57,9 +57,3 @@ After step 3, the script shows accuracy results and enters interactive mode—si
 - **Data balance** Reviews are oversampled to create a 50/50 split, meaning a random classifier would achieve 0.50 accuracy.
 - **Typical results** A 0.80 score means the model correctly classifies about four out of five reviews on new data.
 - **Variability** IMDb content changes daily; scraping at different times may affect performance slightly.
-
-**Potential Enhancements**
-
-- Gather more reviews (beyond just the Top 100 list).
-- Fine-tune hyperparameters (embedding dimension, LSTM units, learning rate).
-- Switch to a pretrained Transformer model like `bert-base-uncased` to achieve over 90% accuracy with minimal extra work.
