@@ -85,7 +85,7 @@ def main():
     print(f"Number of reviews: {len(df)}")
 
     # Label and balance data
-    df['label'] = df['Rating'].apply(lambda x: 1 if x >= 7 else 0)
+    df['label'] = df['Rating'].apply(lambda x: 1 if x >= 6 else 0)
     df = balance_data(df)
 
     # Tokenaizinng and spliting data

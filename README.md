@@ -16,37 +16,43 @@ The workflow runs through `main.py`, which provides a simple command-line menu t
 
 - **`web_page_extraction.py`** — scrapes the Top 100 page and stores title-URL pairs in `data/IMDb_movie_links.json`.
 - **`comments_extraction.py`** — navigates to each film's *User reviews* section, loads comments incrementally, and saves them (rating, title, text) to `data/IMDb_reviews.json`.
-- **`comment_vectorization.py`** — preprocesses text, assigns sentiment labels (rating ≥ 7 for positive; ≤ 6 for negative), balances classes, tokenizes sentences, and trains a Bi-LSTM with early stopping. It displays metrics and provides an interactive prediction interface.
+- **`comment_vectorization.py`** — preprocesses text, assigns sentiment labels (rating ≥ 6 for positive; ≤ 5 for negative), balances classes, tokenizes sentences, and trains a Bi-LSTM with early stopping. It displays metrics and provides an interactive prediction interface.
 - **`main.py`** — controls the end-to-end pipeline through a numbered menu.
 
 ---
 
 ## Quick-Start Guide
 
-```bash
-bash
-KopijuotiRedaguoti
-# Clone the repository
-git clone https://github.com/SimasRIS/IMDb_comment_analysis.git
-cd imdb-sentiment
-
-# (Optional) create an isolated Python environment
-python -m venv venv
-# macOS/Linux
-source venv/bin/activate
-# Windows
-venv\Scripts\activate
-
-# Install project dependencies
-pip install -r requirements.txt
-
-# Launch the interactive menu
-python main.py
-# 1  Scrape movie links   (2 mins)
-# 2  Scrape user reviews  (over 15h, opens Chrome)
-# 3  Train & evaluate     (over 5 mins min on a laptop CPU)
-
+Clone the repository<br>
 ```
+git clone https://github.com/SimasRIS/IMDb_comment_analysis.git
+```
+```
+cd imdb-sentiment
+```
+(Optional) create an isolated Python environment
+```
+python -m venv venv
+```
+macOS/Linux
+```
+source venv/bin/activate
+```
+Windows
+```
+venv\Scripts\activate
+```
+Install project dependencies
+```
+pip install -r requirements.txt
+```
+Launch the interactive menu
+```
+python main.py
+```
+1.  Scrape movie links   (2 mins) <br>
+2.  Scrape user reviews  (over 15h, opens Chrome) <br>
+3.  Train & evaluate     (over 5 mins min on a laptop CPU)
 
 After step 3, the script shows accuracy results and enters interactive mode—simply paste any review text to get an instant sentiment prediction with confidence score.
 
